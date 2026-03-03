@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Sakura SMP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Trang chủ</h1>
+
+    <nav>
+        <a href="index.html"><button disabled>Trang chủ</button></a>
+        <a href="donate.html"><button>Donate</button></a>
+        <a href="fixbug.html"><button>Fix bug</button></a>
+        <a href="luat.html"><button>Luật</button></a>
+    </nav>
+
+    <hr>
+</header>
+
+<main class="main-box">
+    <h2>IP Server</h2>
+    <p>Nhấn nút bên dưới để copy IP server</p>
+
+    <button class="copy-btn" onclick="copyJavaIP()">
+        Copy IP Minecraft Java
+    </button>
+
+    <br><br>
+
+    <button class="copy-btn" onclick="copyBedrockIP()">
+        Copy IP Minecraft Bedrock
+    </button>
+
+    <p id="status"></p>
+</main>
+
+<hr>
+
+<footer>
+    <h3>Liên hệ</h3>
+    <a href="https://discord.gg/h8q23GZ8zV" target="_blank">
+        <button>Discord</button>
+    </a>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
