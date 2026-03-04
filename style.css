@@ -1,43 +1,70 @@
+/* ===== RESET ===== */
+
 *{
 box-sizing:border-box;
+margin:0;
+padding:0;
 }
 
 html,body{
-margin:0;
-padding:0;
 height:100%;
-}
-
-body{
-background:url("SakuraSMP.png") no-repeat center center fixed;
-background-size:cover;
 font-family:Arial, sans-serif;
 color:white;
 }
 
-/* làm tối nền */
+/* ===== BACKGROUND ===== */
+
+body{
+background:url("SakuraSMP.png") no-repeat center center fixed;
+background-size:cover;
+position:relative;
+}
+
+/* lớp làm tối nền */
 body::before{
 content:"";
 position:fixed;
 inset:0;
 background:rgba(0,0,0,0.55);
 z-index:0;
+
+/* QUAN TRỌNG: không chặn click */
+pointer-events:none;
 }
 
-header,main{
+/* ===== LAYOUT ===== */
+
+header,
+main,
+footer{
 position:relative;
 z-index:1;
 }
 
-/* HEADER */
+/* ===== HEADER ===== */
 
 header{
 text-align:center;
 padding:40px 20px;
 }
 
+header h1{
+font-size:36px;
+margin-bottom:20px;
+}
+
+/* ===== MENU ===== */
+
+nav{
+margin-bottom:10px;
+}
+
+nav a{
+text-decoration:none;
+}
+
 nav button{
-padding:10px 18px;
+padding:10px 20px;
 margin:6px;
 border-radius:10px;
 border:2px solid white;
@@ -53,7 +80,7 @@ background:white;
 color:black;
 }
 
-/* MAIN */
+/* ===== MAIN ===== */
 
 main{
 display:flex;
@@ -63,7 +90,7 @@ min-height:60vh;
 padding:20px;
 }
 
-/* GLASS EFFECT */
+/* ===== GLASS BOX ===== */
 
 .glass-box{
 max-width:700px;
@@ -80,29 +107,60 @@ border-radius:18px;
 box-shadow:0 0 30px rgba(0,0,0,0.5);
 }
 
-/* button donate */
+.glass-box h2{
+margin-bottom:15px;
+}
 
-.btn-nap{
+.glass-box h3{
+font-weight:normal;
+opacity:0.9;
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+text-align:center;
+padding:30px;
+}
+
+/* ===== BUTTON FOOTER ===== */
+
+footer button{
 padding:10px 18px;
 border-radius:10px;
-border:none;
-background:#ff6b6b;
+border:2px solid white;
+background:transparent;
 color:white;
 font-weight:bold;
 cursor:pointer;
 transition:0.3s;
 }
 
-.btn-nap:hover{
-background:#ff3b3b;
+footer button:hover{
+background:white;
+color:black;
 }
 
-/* mobile */
+/* ===== HR ===== */
+
+hr{
+border:none;
+height:1px;
+background:rgba(255,255,255,0.5);
+margin:20px 0;
+}
+
+/* ===== MOBILE ===== */
 
 @media (max-width:768px){
 
+header h1{
+font-size:28px;
+}
+
 nav button{
 width:100%;
+max-width:250px;
 }
 
 .glass-box{
