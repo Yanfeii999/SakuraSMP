@@ -10,27 +10,30 @@
 
 <!-- ===== HEADER ===== -->
 <header>
-    <h1>Fix bug</h1>
+<h1>Fix bug</h1>
 
-    <nav>
-        <a href="index.html"><button>Trang chủ</button></a>
-        <a href="donate.html"><button>Donate</button></a>
-        <a href="fixbug.html"><button disabled>Fix bug</button></a>
-        <a href="luat.html"><button>Luật</button></a>
-    </nav>
+<nav>
+<a href="index.html"><button>Trang chủ</button></a>
+<a href="donate.html"><button>Donate</button></a>
+<a href="fixbug.html"><button disabled>Fix bug</button></a>
+<a href="luat.html"><button>Luật</button></a>
+</nav>
 
-    <hr>
+<hr>
 </header>
 
 <!-- ===== MAIN ===== -->
 <main>
 
 <div class="glass-box">
-    <h2>Fix bug</h2>
 
-    <div class="update">
-        <h3>Chưa có bug nào cần fix</h3>
-    </div>
+<h2>Fix bug</h2>
+
+<!-- Google Sheet sẽ hiển thị tại đây -->
+<div class="update" id="bug-list">
+Đang tải danh sách bug...
+</div>
+
 </div>
 
 </main>
@@ -45,6 +48,9 @@
 </a>
 
 </footer>
+
+<!-- LOAD SCRIPT -->
+<script src="script.js"></script>
 
 </body>
 </html>
