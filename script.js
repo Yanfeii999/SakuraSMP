@@ -45,7 +45,7 @@ function showStatus(message) {
 
 async function loadBugs(){
 
-const url = "https://docs.google.com/spreadsheets/d/14lWrKRb88aBJ_GB5j5O-1fLUE7fVCPQv-HOulLU1U4s/pub?output=csv";
+const url = "https://docs.google.com/spreadsheets/d/1Fj00zntXVpCJndINUND5DIaJdyRThwl-S58Csb9tkIU/export?format=csv&gid=461089492";
 
 try{
 
