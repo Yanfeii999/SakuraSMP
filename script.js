@@ -23,7 +23,7 @@ function fallbackCopy(text, successMessage) {
 // ===== COPY JAVA =====
 function copyJavaIP() {
     const ip = "gsvr3.play4fun.vn";
-    copyText(ip, "✅ Đã copy IP Java: " + ip);
+    copyText(ip, "✅ Đã copy IP Java:");
 }
 
 // ===== COPY BEDROCK =====
