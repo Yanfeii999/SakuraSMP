@@ -1,7 +1,6 @@
 // =======================
 // COPY TEXT
 // =======================
-
 function copyText(text,message){
 
 if(navigator.clipboard){
