@@ -8,7 +8,6 @@
 
 <body>
 
-<!-- ===== HEADER ===== -->
 <header>
 <h1>Lệnh</h1>
 
@@ -17,21 +16,19 @@
 <a href="donate.html"><button>Donate</button></a>
 <a href="fixbug.html"><button>Fix bug</button></a>
 <a href="luat.html"><button>Luật</button></a>
-<a href="lenh.html"><button disabled>Fix bug</button></a>
+<a href="lenh.html"><button disabled>Lệnh</button></a>
 </nav>
 
 <hr>
 </header>
 
-<!-- ===== MAIN ===== -->
 <main>
 
 <div class="glass-box">
 
-<h2>Fix bug</h2>
+<h2>Danh sách lệnh</h2>
 
-<!-- Google Sheet sẽ hiển thị tại đây -->
-<div class="update" id="bug-list">
+<div class="update" id="command-list">
 Đang tải danh sách lệnh...
 </div>
 
@@ -39,7 +36,6 @@
 
 </main>
 
-<!-- LOAD SCRIPT -->
 <script src="script.js"></script>
 
 </body>
