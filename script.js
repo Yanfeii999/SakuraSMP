@@ -1,51 +1,8 @@
-// ===== COPY FUNCTION CHUNG =====
-function copyText(text, successMessage) {
-    if (navigator.clipboard) {
-        navigator.clipboard.writeText(text)
-            .then(() => showStatus(successMessage))
-            .catch(() => fallbackCopy(text, successMessage));
-    } else {
-        fallbackCopy(text, successMessage);
-    }
-}
+// ===== LOAD COMMANDS =====
 
-// ===== FALLBACK nếu clipboard lỗi =====
-function fallbackCopy(text, successMessage) {
-    const textarea = document.createElement("textarea");
-    textarea.value = text;
-    document.body.appendChild(textarea);
-    textarea.select();
-    document.execCommand("copy");
-    document.body.removeChild(textarea);
-    showStatus(successMessage);
-}
+async function loadCommands(){
 
-// ===== COPY JAVA =====
-function copyJavaIP() {
-    const ip = "gsvr3.play4fun.vn";
-    copyText(ip, "✅ Đã copy IP Java:");
-}
-
-// ===== COPY BEDROCK =====
-function copyBedrockIP() {
-    const text = "gsvr3.play4fun.vn | Port: 25732";
-    copyText(text, "✅ Đã copy IP Bedrock");
-}
-
-// ===== HIỂN THỊ STATUS =====
-function showStatus(message) {
-    const status = document.getElementById("status");
-    status.innerText = message;
-
-    setTimeout(() => {
-        status.innerText = "";
-    }, 3000);
-}
-// ===== LOAD BUG TỪ GOOGLE SHEETS =====
-
-async function loadBugs(){
-
-const url = "https://docs.google.com/spreadsheets/d/1Fj00zntXVpCJndINUND5DIaJdyRThwl-S58Csb9tkIU/export?format=csv&gid=461089492";
+const url = "https://docs.google.com/spreadsheets/d/1z1fEjK4tOXG47Jpi3YYg4UXIxLKNcqB5ULUd3K1UfOI/export?format=csv";
 
 try{
 
@@ -60,35 +17,37 @@ rows.forEach(row => {
 
 const cols = row.split(",");
 
-if(cols.length >= 3){
+if(cols.length >= 2){
 
-const time = cols[0];
-const bug = cols[1];
-const status = cols[2];
+const command = cols[0];
+const description = cols[1];
 
-html += `<p>📅 ${time} - ${status} : ${bug}</p>`;
+html += `
+<div class="cmd-box">
+<div class="cmd-name">/${command}</div>
+<div class="cmd-desc">${description}</div>
+</div>
+`;
 
 }
 
 });
 
 if(html === ""){
-html = "<h3>Chưa có bug nào cần fix</h3>";
+html = "<h3>Chưa có lệnh nào</h3>";
 }
 
-const bugList = document.getElementById("bug-list");
+const list = document.getElementById("command-list");
 
-if(bugList){
-bugList.innerHTML = html;
+if(list){
+list.innerHTML = html;
 }
 
 }catch(err){
-
-console.error("Không tải được bug list", err);
-
+console.error("Không tải được danh sách lệnh", err);
 }
 
 }
 
-// chạy khi trang load
+document.addEventListener("DOMContentLoaded", loadCommands);
 document.addEventListener("DOMContentLoaded", loadBugs);
