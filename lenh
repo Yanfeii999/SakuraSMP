@@ -5,12 +5,9 @@
 <title>Sakura SMP</title>
 <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
 <header>
 <h1>Lệnh</h1>
-
 <nav>
 <a href="index.html"><button>Trang chủ</button></a>
 <a href="donate.html"><button>Donate</button></a>
@@ -18,24 +15,16 @@
 <a href="luat.html"><button>Luật</button></a>
 <a href="lenh.html"><button disabled>Lệnh</button></a>
 </nav>
-
 <hr>
 </header>
-
 <main>
-
 <div class="glass-box">
-
 <h2>Danh sách lệnh</h2>
-
 <div class="update" id="command-list">
 Đang tải danh sách lệnh...
 </div>
-
 </div>
-
 </main>
-
 <script src="script.js"></script>
 
 </body>
